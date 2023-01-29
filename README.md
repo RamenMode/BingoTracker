@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+Author: Kevin Xue
+
+This application is intended to track any number of bingo sheets, allowing players to leave bingo sheets unmarked while tracking a larger number of sheets
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
