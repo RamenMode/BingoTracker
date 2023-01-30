@@ -5,18 +5,21 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 function Boards(props) {
     const navigation = useNavigate();
-    const [BingoData, setBingoData] = useState('')
     const [BingoArray, setBingoArray] = useState([])
-//fix await document.getElementById. LIkely change to a form instead. 
-    async function onPress() {
-        const data = await document.getElementById("numbers").value
-        setBingoData(data)
-        let Spaceless = BingoData.replace(/\s/g, '');
+    const [Input, setInput] = useState('');
+
+    const handleChange = (event) => {
+        // input value from "event"
+        setInput(event.target.value);
+      };
+    //fix await document.getElementById. LIkely change to a form instead. 
+    async function onPress(data) {
+        let Spaceless = data.replace(/\s/g, '');
         let arrayBingo = Spaceless.split(',');
         setBingoArray(arrayBingo)
-        console.log(BingoArray)
-        alert(BingoArray)
     }
+
+    useEffect(() => console.log(BingoArray), [BingoArray])
 
     return (
         <div>
@@ -28,9 +31,9 @@ function Boards(props) {
             </h4>
             <p>Please enter your bingo sheet numbers from left to right, separated by commas starting with the first row ex. 1, 16, 37, 55, 75, 2, 24...</p>
             <label for="numbers">Numbers:</label>
-            <input type="text" id="numbers" name="numbers" placeholder="enter your board"></input>
+            <input onChange={handleChange} type="text" id="numbers" name="numbers" placeholder="enter your board"></input>
             <p></p>
-            <button className="custom-button blue" onClick={() => {onPress()}}>Continue</button>
+            <button className="custom-button blue" onClick={() => {onPress(Input)}}>Continue</button>
             </header>
             </div>
         </div>
