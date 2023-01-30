@@ -2,12 +2,14 @@ import React from 'react';
 import logo from './cooltext428473160330370_adobe_express_1.svg';
 import './App.css';
 import './Button.css'
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
-function home(props) {
+function Home(props) {
+    const navigation = useNavigate();
+    function handleClick(navigate) {
+        
+        navigate('/Boards')
 
-    function sayHello() {
-        alert('You clicked me!');
     }
     return (
         <div>
@@ -17,11 +19,11 @@ function home(props) {
             <p>
                 An automatic tracker for your bingo sheets
             </p>
-            <button className="custom-button blue" onClick={sayHello}>Continue</button>
+            <button className="custom-button blue" onClick={() => {handleClick(navigation)}}>Continue</button>
             </header>
             </div>
         </div>
     );
 }
 
-export default home;
+export default Home;
