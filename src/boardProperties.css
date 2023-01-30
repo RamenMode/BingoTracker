@@ -1,0 +1,103 @@
+body {
+  padding-top: 0px;
+  background: #f5f7f8;
+}
+
+.grid-1 {
+  display: grid;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  grid-template-columns: 1fr 1fr 1fr 1fr minmax(160px, 1fr);
+  
+  grid-gap: 10px;
+  position: relative;
+  
+}
+
+/* items */
+
+.grid-1 div {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  }
+
+/* specific item styles */
+
+.item-1 {
+  background: #297036;
+}
+.item-2 {
+  background: #297036;
+}
+.item-3 {
+  background: #297036;
+}
+.item-4 {
+  background: #297036;
+}
+.item-5 {
+  background: #297036;
+}
+.item-6 {
+  background: #297036;
+}
+.item-7 {
+  background: #297036;
+}
+.item-8 {
+  background: #297036;
+}
+.item-9 {
+  background: #297036;
+}
+.item-10 {
+    background: #297036;
+  }
+.item-11 {
+  background: #297036;
+}
+.item-12 {
+  background: #297036;
+}
+.item-13 {
+  background: #297036;
+}
+.item-14 {
+  background: #297036;
+}
+.item-15 {
+    background: #297036;
+  }
+.item-16 {
+  background: #297036;
+}
+.item-17 {
+  background: #297036;
+}
+.item-18 {
+  background: #297036;
+}
+.item-19 {
+  background: #297036;
+}
+.item-20 {
+    background: #297036;
+  }
+.item-21 {
+  background: #297036;
+}
+.item-22 {
+  background: #297036;
+}
+.item-23 {
+  background: #297036;
+}
+.item-24 {
+  background: #297036;
+}
+.item-25 {
+    background: #297036;
+  }

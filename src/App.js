@@ -5,6 +5,7 @@ import Home from "./Home.js"
 import NotFound from "./NotFound"
 import Boards from "./Boards"
 import Cell from "./Cell.js"
+import BingoBoard from './BingoBoard';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/Boards" element={<Boards/>}/>
           <Route exact path="/Cell" element={<Cell/>}/>
+          <Route exact path="/BingoBoard" element={<BingoBoard/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
     </Router>
